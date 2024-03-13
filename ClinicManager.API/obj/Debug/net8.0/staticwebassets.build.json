@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "xmNS06cOaMJ9vverr6TjEjUwn5w0g7JSsQG2zA5pMFI=",
+  "Source": "ClinicManager.API",
+  "BasePath": "_content/ClinicManager.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
