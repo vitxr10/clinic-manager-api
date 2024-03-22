@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicManager.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,7 @@ namespace ClinicManager.Core.Entities
         public DateTime Duration { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
+        public ServiceModalityEnum Modality { get; set; }
         public Doctor Doctor { get; set; }
         public Patient Patient { get; set; }
         public Receptionist Receptionist { get; set; }

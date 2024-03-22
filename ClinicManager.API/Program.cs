@@ -1,4 +1,6 @@
+using ClinicManager.Core.Repository;
 using ClinicManager.Infrastructure.Persistence.Context;
+using ClinicManager.Infrastructure.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +12,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Context
 builder.Services.AddDbContext<ClinicManagerDbContext>(options => options.UseInMemoryDatabase("ClinicManagerDb"));
+
+// Interfaces
+builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 
 var app = builder.Build();
 
