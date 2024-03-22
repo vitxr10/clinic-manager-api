@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClinicManager.Core.Entities
 {
-    public class Doctor
+    public class Receptionist
     {
         public int Id { get; private set; }
         public string FirstName { get; private set; }
@@ -18,14 +18,7 @@ namespace ClinicManager.Core.Entities
         public string Password { get; private set; }
         public RoleEnum Role { get; private set; }
         public string CPF { get; private set; }
-        public BloodTypeEnum BloodType { get; private set; }
-        public SpecialtyEnum Specialty { get; private set; }
-        public List<string> Solutions { get; private set; }
-        public string CRM { get; private set; }
         public Address Address { get; private set; }
         public List<Service> Services { get; private set; }
-        public bool Active { get; private set; }
-        public DateTime CreatedAt { get; private set; }
-        public DateTime UpdatedAt { get; private set; }
     }
 }

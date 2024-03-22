@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicManager.API", "ClinicManager.API\ClinicManager.API.csproj", "{9BE4499D-0F6B-472F-8AAD-12491EEEA13C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicManager.API", "ClinicManager.API\ClinicManager.API.csproj", "{9BE4499D-0F6B-472F-8AAD-12491EEEA13C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicManager.Core", "ClinicManager.Core\ClinicManager.Core.csproj", "{5C9F0D96-FD69-4712-B446-E2AB90EA983C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClinicManager.Core", "ClinicManager.Core\ClinicManager.Core.csproj", "{5C9F0D96-FD69-4712-B446-E2AB90EA983C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicManager.Infrastructure", "ClinicManager.Infrastructure\ClinicManager.Infrastructure.csproj", "{6C871B22-FED4-4455-A42B-6EE716689E83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5C9F0D96-FD69-4712-B446-E2AB90EA983C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C9F0D96-FD69-4712-B446-E2AB90EA983C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C9F0D96-FD69-4712-B446-E2AB90EA983C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C871B22-FED4-4455-A42B-6EE716689E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C871B22-FED4-4455-A42B-6EE716689E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C871B22-FED4-4455-A42B-6EE716689E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C871B22-FED4-4455-A42B-6EE716689E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
