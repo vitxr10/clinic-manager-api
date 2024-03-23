@@ -9,6 +9,15 @@ namespace ClinicManager.Core.Entities
 {
     public class Address
     {
+        public Address(string userDocument, int number, string city, string state, string cEP)
+        {
+            UserDocument = userDocument;
+            Number = number;
+            City = city;
+            State = state;
+            CEP = cEP;
+        }
+
         public int Id {  get; private set; }
         public string UserDocument { get; private set; }
         public int Number { get; private set; }

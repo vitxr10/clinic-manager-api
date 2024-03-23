@@ -9,6 +9,25 @@ namespace ClinicManager.Core.Entities
 {
     public class Doctor
     {
+        public Doctor(string firstName, string lastName, DateTime birthDay, string phone, string email, string password, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, List<string> solutions, string cRM, Address address)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDay = birthDay;
+            Phone = phone;
+            Email = email;
+            Password = password;
+            Role = RoleEnum.Doctor;
+            CPF = cPF;
+            BloodType = bloodType;
+            Specialty = specialty;
+            Solutions = solutions;
+            CRM = cRM;
+            Active = true;
+            CreatedAt = DateTime.Now;
+            Address = address;
+        }
+
         public int Id { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
