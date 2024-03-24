@@ -1,0 +1,31 @@
+﻿using ClinicManager.Core.Entities;
+using ClinicManager.Core.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClinicManager.Application.ViewModels
+{
+    public class PatientViewModel
+    {
+        public PatientViewModel(int id, string firstName, string lastName, DateTime birthDay, string email, string cPF, bool active)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDay = birthDay;
+            Email = email;
+            CPF = cPF;
+            Active = active;
+        }
+
+        public int Id { get; private set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public DateTime BirthDay { get; private set; }
+        public string Email { get; private set; }
+        public string CPF { get; private set; }
+        public bool Active { get; private set; }
+    }
+}

@@ -21,7 +21,7 @@ namespace ClinicManager.Application.Commands.CreateDoctor
         public string CPF { get; private set; }
         public BloodTypeEnum BloodType { get; private set; }
         public SpecialtyEnum Specialty { get; private set; }
-        public List<string> Solutions { get; private set; }
+        public string[] Solutions { get; private set; }
         public string CRM { get; private set; }
         public AddressDTO Address { get; set; }
     }

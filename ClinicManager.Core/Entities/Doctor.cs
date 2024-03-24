@@ -9,7 +9,7 @@ namespace ClinicManager.Core.Entities
 {
     public class Doctor
     {
-        public Doctor(string firstName, string lastName, DateTime birthDay, string phone, string email, string password, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, List<string> solutions, string cRM, Address address)
+        public Doctor(string firstName, string lastName, DateTime birthDay, string phone, string email, string password, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, string[] solutions, string cRM, Address address)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -39,12 +39,24 @@ namespace ClinicManager.Core.Entities
         public string CPF { get; private set; }
         public BloodTypeEnum BloodType { get; private set; }
         public SpecialtyEnum Specialty { get; private set; }
-        public List<string> Solutions { get; private set; }
+        public string[] Solutions { get; private set; }
         public string CRM { get; private set; }
         public Address Address { get; private set; }
         public List<Service> Services { get; private set; }
         public bool Active { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime UpdatedAt { get; private set; }
+
+        public void Update(string[] solutions)
+        {
+            Solutions = solutions;
+            UpdatedAt = DateTime.Now;
+        }
+
+        public void Delete()
+        {
+            Active = false;
+            UpdatedAt = DateTime.Now;
+        }
     }
 }
