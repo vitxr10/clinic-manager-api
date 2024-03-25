@@ -9,10 +9,21 @@ namespace ClinicManager.Application.DTOs
 {
     public class AddressDTO
     {
-        public string UserDocument { get; private set; }
-        public int Number { get; private set; }
-        public string City { get; private set; }
-        public string State { get; private set; }
-        public string CEP { get; private set; }
+        public AddressDTO(int userDocument, int number, string city, string state, string cEP, string neighborhood)
+        {
+            UserDocument = userDocument;
+            Number = number;
+            City = city;
+            State = state;
+            CEP = cEP;
+            Neighborhood = neighborhood;    
+        }
+
+        public int UserDocument { get; set; }
+        public int Number { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string CEP { get; set; }
+        public string Neighborhood { get; set; }
     }
 }

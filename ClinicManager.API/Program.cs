@@ -20,6 +20,10 @@ builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 
+// MediatR
+var myHandlers = AppDomain.CurrentDomain.Load("ClinicManager.Application");
+builder.Services.AddMediatR(m => m.RegisterServicesFromAssemblies(myHandlers));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 

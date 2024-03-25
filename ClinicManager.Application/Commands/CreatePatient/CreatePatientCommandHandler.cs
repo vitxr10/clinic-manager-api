@@ -19,15 +19,7 @@ namespace ClinicManager.Application.Commands.CreatePatient
 
         public async Task<int> Handle(CreatePatientCommand request, CancellationToken cancellationToken)
         {
-            var addressDTO = request.Address;
-            var address = new Address
-                (
-                    addressDTO.UserDocument,
-                    addressDTO.Number,
-                    addressDTO.City,
-                    addressDTO.State,
-                    addressDTO.CEP
-                );
+
 
             var patient = new Patient
                 (
@@ -40,11 +32,29 @@ namespace ClinicManager.Application.Commands.CreatePatient
                     request.CPF,
                     request.BloodType,
                     request.Height,
-                    request.Weight,
-                    address
+                    request.Weight
                 );
 
-            return await _patientRepository.CreateAsync(patient);
+            await _patientRepository.CreateAsync(patient);
+
+            
+            var addressDTO = request.Address;
+
+            var address = new Address
+                (
+                    addressDTO.UserDocument,
+                    addressDTO.Number,
+                    addressDTO.City,
+                    addressDTO.State,
+                    addressDTO.CEP,
+                    addressDTO.Neighborhood
+                );
+
+            patient.Address = address;
+
+            await _patientRepository.SaveAsync();
+
+            return patient.Id;
         }
     }
 }

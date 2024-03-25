@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace ClinicManager.Infrastructure.Persistence.Configurations
 {
-    public class AddressConfiguration : IEntityTypeConfiguration<Service>
+    public class AddressConfiguration : IEntityTypeConfiguration<Address>
     {
-        public void Configure(EntityTypeBuilder<Service> builder)
+        public void Configure(EntityTypeBuilder<Address> builder)
         {
             builder.ToTable("TB_Address");
-
             builder.HasKey(a => a.Id);
         }
     }

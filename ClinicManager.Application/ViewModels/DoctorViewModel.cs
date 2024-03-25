@@ -22,14 +22,14 @@ namespace ClinicManager.Application.ViewModels
             Active = active;
         }
 
-        public int Id { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Phone { get; private set; }
-        public string Email { get; private set; }
-        public string CPF { get; private set; }
-        public SpecialtyEnum Specialty { get; private set; }
-        public string CRM { get; private set; }
-        public bool Active { get; private set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string CPF { get; set; }
+        public SpecialtyEnum Specialty { get; set; }
+        public string CRM { get; set; }
+        public bool Active { get; set; }
     }
 }

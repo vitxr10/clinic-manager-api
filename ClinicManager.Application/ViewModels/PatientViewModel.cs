@@ -20,12 +20,12 @@ namespace ClinicManager.Application.ViewModels
             Active = active;
         }
 
-        public int Id { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public DateTime BirthDay { get; private set; }
-        public string Email { get; private set; }
-        public string CPF { get; private set; }
-        public bool Active { get; private set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BirthDay { get; set; }
+        public string Email { get; set; }
+        public string CPF { get; set; }
+        public bool Active { get; set; }
     }
 }

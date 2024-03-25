@@ -9,16 +9,16 @@ namespace ClinicManager.Core.Entities
 {
     public class Receptionist
     {
-        public int Id { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public DateTime BirthDay { get; private set; }
-        public string Phone { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public RoleEnum Role { get; private set; }
-        public string CPF { get; private set; }
-        public Address Address { get; private set; }
-        public List<Service> Services { get; private set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BirthDay { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public RoleEnum Role { get; set; }
+        public string CPF { get; set; }
+        public Address Address { get; set; }
+        public List<Service> Services { get; set; }
     }
 }

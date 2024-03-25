@@ -19,15 +19,7 @@ namespace ClinicManager.Application.Commands.CreateDoctor
 
         public async Task<int> Handle(CreateDoctorCommand request, CancellationToken cancellationToken)
         {
-            var addressDTO = request.Address;
-            var address = new Address
-                (
-                    request.CPF,
-                    addressDTO.Number,
-                    addressDTO.City,
-                    addressDTO.State,
-                    addressDTO.CEP
-                );
+
 
             var doctor = new Doctor
                 (
@@ -41,11 +33,25 @@ namespace ClinicManager.Application.Commands.CreateDoctor
                     request.BloodType,
                     request.Specialty,
                     request.Solutions,
-                    request.CRM,
-                    address
+                    request.CRM
                 );
 
             await _doctorRepository.CreateAsync(doctor);
+
+            var addressDTO = request.Address;
+            var address = new Address
+                (
+                    addressDTO.UserDocument,
+                    addressDTO.Number,
+                    addressDTO.City,
+                    addressDTO.State,
+                    addressDTO.CEP,
+                    addressDTO.Neighborhood
+                );
+
+            doctor.Address = address;
+
+            await _doctorRepository.SaveAsync();
 
             return doctor.Id;
         }

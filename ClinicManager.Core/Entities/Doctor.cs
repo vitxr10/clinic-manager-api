@@ -9,7 +9,7 @@ namespace ClinicManager.Core.Entities
 {
     public class Doctor
     {
-        public Doctor(string firstName, string lastName, DateTime birthDay, string phone, string email, string password, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, string[] solutions, string cRM, Address address)
+        public Doctor(string firstName, string lastName, DateTime birthDay, string phone, string email, string password, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, string[] solutions, string cRM)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -25,27 +25,26 @@ namespace ClinicManager.Core.Entities
             CRM = cRM;
             Active = true;
             CreatedAt = DateTime.Now;
-            Address = address;
         }
 
-        public int Id { get; private set; }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public DateTime BirthDay { get; private set; }
-        public string Phone { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public RoleEnum Role { get; private set; }
-        public string CPF { get; private set; }
-        public BloodTypeEnum BloodType { get; private set; }
-        public SpecialtyEnum Specialty { get; private set; }
-        public string[] Solutions { get; private set; }
-        public string CRM { get; private set; }
-        public Address Address { get; private set; }
-        public List<Service> Services { get; private set; }
-        public bool Active { get; private set; }
-        public DateTime CreatedAt { get; private set; }
-        public DateTime UpdatedAt { get; private set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BirthDay { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public RoleEnum Role { get; set; }
+        public string CPF { get; set; }
+        public BloodTypeEnum BloodType { get; set; }
+        public SpecialtyEnum Specialty { get; set; }
+        public string[] Solutions { get; set; }
+        public string CRM { get; set; }
+        public Address Address { get; set; }
+        public List<Service> Services { get; set; }
+        public bool Active { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
 
         public void Update(string[] solutions)
         {

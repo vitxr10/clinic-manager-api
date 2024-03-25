@@ -9,14 +9,14 @@ namespace ClinicManager.Core.Entities
 {
     public class Service
     {
-        public Service(int patientId, int doctorId, int? receptionistId, string name, DateTime start, ServiceModalityEnum modality)
+        public Service(int patientId, int doctorId, int? receptionistId, string name, DateTime startDate, ServiceModalityEnum modality)
         {
             PatientId = patientId;
             DoctorId = doctorId;
             ReceptionistId = receptionistId;
             Name = name;
-            StartDate = start;
-            EndDate = start.AddMinutes(30);
+            StartDate = startDate;
+            EndDate = StartDate.AddMinutes(30);
             Modality = modality;
         }
 

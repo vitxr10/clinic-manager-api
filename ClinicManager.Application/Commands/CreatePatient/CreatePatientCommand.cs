@@ -12,16 +12,16 @@ namespace ClinicManager.Application.Commands.CreatePatient
 {
     public class CreatePatientCommand : IRequest<int>
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public DateTime BirthDay { get; private set; }
-        public string Phone { get; private set; }
-        public string Email { get; private set; }
-        public string Password { get; private set; }
-        public string CPF { get; private set; }
-        public BloodTypeEnum BloodType { get; private set; }
-        public double Height { get; private set; }
-        public double Weight { get; private set; }
-        public AddressDTO Address { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BirthDay { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string CPF { get; set; }
+        public BloodTypeEnum BloodType { get; set; }
+        public double Height { get; set; }
+        public double Weight { get; set; }
+        public AddressDTO Address { get; set; }
     }
 }

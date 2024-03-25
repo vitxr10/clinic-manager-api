@@ -40,7 +40,7 @@ namespace ClinicManager.Application.Queries.GetDoctorById
                     doctor.Address,
                     doctor.Active,
                     doctor.CreatedAt,
-                    doctor.UpdatedAt
+                    (DateTime)doctor.UpdatedAt
                 );
 
             return doctorDetailsViewModel;

@@ -18,11 +18,11 @@ namespace ClinicManager.Infrastructure.Persistence.Configurations
             builder.HasKey(r => r.Id);
 
             builder.HasOne(r => r.Address)
-                .WithOne(a => a.Recepsionist)
+                .WithOne()
                 .HasForeignKey<Address>(a => a.UserDocument);
 
             builder.HasMany(r => r.Services)
-                .WithOne(s => s.Receptionist)
+                .WithOne()
                 .HasForeignKey(s => s.ReceptionistId);
         }
     }
