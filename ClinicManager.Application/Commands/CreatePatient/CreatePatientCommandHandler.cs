@@ -19,8 +19,6 @@ namespace ClinicManager.Application.Commands.CreatePatient
 
         public async Task<int> Handle(CreatePatientCommand request, CancellationToken cancellationToken)
         {
-
-
             var patient = new Patient
                 (
                     request.FirstName,

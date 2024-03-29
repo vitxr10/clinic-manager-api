@@ -26,13 +26,14 @@ builder.Services.AddMediatR(m => m.RegisterServicesFromAssemblies(myHandlers));
 
 var app = builder.Build();
 
+app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 
 app.UseHttpsRedirection();
 
