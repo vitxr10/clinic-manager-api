@@ -40,7 +40,8 @@ namespace ClinicManager.Application.Commands.CreatePatient
 
             var address = new Address
                 (
-                    addressDTO.UserDocument,
+                    patient.Id,
+                    addressDTO.UserRole,
                     addressDTO.Number,
                     addressDTO.City,
                     addressDTO.State,

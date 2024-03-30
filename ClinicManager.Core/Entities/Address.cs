@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicManager.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -9,9 +10,10 @@ namespace ClinicManager.Core.Entities
 {
     public class Address
     {
-        public Address(int userDocument, int number, string city, string state, string cEP ,string neighborhood)
+        public Address(int userId, RoleEnum userRole, int number, string city, string state, string cEP, string neighborhood)
         {
-            UserDocument = userDocument;
+            UserId = userId;
+            UserRole = userRole;
             Number = number;
             City = city;
             State = state;
@@ -20,7 +22,8 @@ namespace ClinicManager.Core.Entities
         }
 
         public int Id {  get; set; }
-        public int UserDocument { get; set; }
+        public int UserId { get; set; }
+        public RoleEnum UserRole { get; set; }
         public int Number { get; set; }
         public string City { get; set; }
         public string State { get; set; }

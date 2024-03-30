@@ -12,6 +12,7 @@ namespace ClinicManager.Application.ViewModels
     {
         public PatientViewModel(int id, string firstName, string lastName, DateTime birthDay, string email, string cPF, bool active)
         {
+            Id = id;
             FirstName = firstName;
             LastName = lastName;
             BirthDay = birthDay;

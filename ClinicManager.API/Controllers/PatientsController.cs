@@ -69,7 +69,7 @@ namespace ClinicManager.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreatePatientCommand command)
+        public async Task<IActionResult> Post(CreatePatientCommand command)
         {
             try
             {

@@ -1,4 +1,5 @@
-﻿using ClinicManager.Application.ViewModels;
+﻿using ClinicManager.Application.DTOs;
+using ClinicManager.Application.ViewModels;
 using ClinicManager.Core.Repository;
 using MediatR;
 using System;
@@ -24,6 +25,9 @@ namespace ClinicManager.Application.Queries.GetDoctorById
             if (doctor == null)
                 throw new Exception("Médico não encontrado.");
 
+            var address = doctor.Address;
+            var addressViewModel = new AddressViewModel(address.Number, address.City, address.State, address.CEP, address.Neighborhood);
+
             var doctorDetailsViewModel = new DoctorDetailsViewModel
                 (
                     doctor.Id,
@@ -37,7 +41,7 @@ namespace ClinicManager.Application.Queries.GetDoctorById
                     doctor.Specialty,
                     doctor.Solutions,
                     doctor.CRM,
-                    doctor.Address,
+                    addressViewModel,
                     doctor.Active,
                     doctor.CreatedAt,
                     (DateTime)doctor.UpdatedAt

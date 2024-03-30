@@ -1,4 +1,5 @@
-﻿using ClinicManager.Core.Entities;
+﻿using ClinicManager.Application.DTOs;
+using ClinicManager.Core.Entities;
 using ClinicManager.Core.Enums;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace ClinicManager.Application.ViewModels
 {
     public class DoctorDetailsViewModel
     {
-        public DoctorDetailsViewModel(int id, string firstName, string lastName, DateTime birthDay, string phone, string email, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, string[] solutions, string cRM, Address address, bool active, DateTime createdAt, DateTime updatedAt)
+        public DoctorDetailsViewModel(int id, string firstName, string lastName, DateTime birthDay, string phone, string email, string cPF, BloodTypeEnum bloodType, SpecialtyEnum specialty, string[] solutions, string cRM, AddressViewModel address, bool active, DateTime createdAt, DateTime updatedAt)
         {
             Id = id;
             FirstName = firstName;
@@ -40,7 +41,7 @@ namespace ClinicManager.Application.ViewModels
         public SpecialtyEnum Specialty { get; set; }
         public string[] Solutions { get; set; }
         public string CRM { get; set; }
-        public Address Address { get; set; }
+        public AddressViewModel Address { get; set; }
         public bool Active { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }

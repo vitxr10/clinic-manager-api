@@ -19,7 +19,7 @@ namespace ClinicManager.Infrastructure.Persistence.Configurations
 
             builder.HasOne(r => r.Address)
                 .WithOne()
-                .HasForeignKey<Address>(a => a.UserDocument);
+                .HasForeignKey<Address>(a => a.UserId);
 
             builder.HasMany(r => r.Services)
                 .WithOne()

@@ -41,7 +41,8 @@ namespace ClinicManager.Application.Commands.CreateDoctor
             var addressDTO = request.Address;
             var address = new Address
                 (
-                    addressDTO.UserDocument,
+                    doctor.Id,
+                    addressDTO.UserRole,
                     addressDTO.Number,
                     addressDTO.City,
                     addressDTO.State,
@@ -52,6 +53,8 @@ namespace ClinicManager.Application.Commands.CreateDoctor
             doctor.Address = address;
 
             await _doctorRepository.SaveAsync();
+
+            var teste = await _doctorRepository.GetByIdAsync(doctor.Id);
 
             return doctor.Id;
         }

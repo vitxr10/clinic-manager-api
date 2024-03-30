@@ -1,18 +1,15 @@
-﻿using ClinicManager.Core.Entities;
-using ClinicManager.Core.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClinicManager.Application.DTOs
+namespace ClinicManager.Application.ViewModels
 {
-    public class AddressDTO
+    public class AddressViewModel
     {
-        public AddressDTO(RoleEnum userRole, int number, string city, string state, string cEP, string neighborhood)
+        public AddressViewModel(int number, string city, string state, string cEP, string neighborhood)
         {
-            UserRole = userRole;
             Number = number;
             City = city;
             State = state;
@@ -20,7 +17,6 @@ namespace ClinicManager.Application.DTOs
             Neighborhood = neighborhood;
         }
 
-        public RoleEnum UserRole { get; set; }
         public int Number { get; set; }
         public string City { get; set; }
         public string State { get; set; }
